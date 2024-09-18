@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tecnología y sus Componentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos globales */
+        body {
+            background-image: url('https://ailabschool.com/wp-content/uploads/2023/10/2023071617532164037.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; /* Habilitar el desplazamiento vertical */
+            position: relative;
+            height: 100vh; /* Asegura que el cuerpo de la página tenga altura completa */
+            box-sizing: border-box; /* Asegura que el tamaño total del contenido sea correcto */
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Texto de bienvenida */
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Botón de mostrar/ocultar */
+        .show-btn {
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .show-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Texto desplegable */
+        .reveal-text {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: #e0e0e0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        /* Botones para más texto */
+        .more-text-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .more-text-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Texto adicional */
+        .extra-text {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #e0e0e0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: left;
+            max-width: 100%;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        /* Títulos dentro del texto adicional */
+        .extra-text h2 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: #d1d1d1;
+        }
+
+        /* Párrafos dentro del texto adicional */
+        .extra-text p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .extra-text ul {
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .extra-text ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Imágenes dentro del texto adicional */
+        .extra-text img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        /* Botón de volver al inicio */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>La tecnología y sus Componentes</h1>
+        <p>Bienvenidos a nuestra página Web, espero que estes listo para "La tecnología y sus Componentes"</p>
+        <button class="show-btn" onclick="toggleText()">Introducción</button>
+        <div class="reveal-text" id="revealText">
+            <p>
+                Aquí te enseñare a navegar en este sito web. Lo único que tienes que hacer para navegar de una manera fácil y sencilla es hacer "clic" sobre los botones que tienen la opción de realizar la del función "clic" y esos botones están en estos 3 colores: rojo, azul y verde. Ahora si estas listo para disfrutar de "La Tecnología y sus Componentes".
+            </p>
+        </div>
+
+        <button class="more-text-btn" onclick="toggleExtraText(1)">Digital vs Analógico y Código ASCII</button>
+        <div class="extra-text" id="extraText1">
+            <h2>Sociedad Digital:</h2>
+            <p>
+                La sociedad digital se refiere al entorno social caracterizado por la integración de la tecnología digital en todos los aspectos de la vida humana. En esta sociedad, las actividades cotidianas, la economía, la educación, el entretenimiento y la comunicación están profundamente influenciadas por tecnologías como Internet, redes sociales, dispositivos inteligentes y servicios en línea.
+            </p>
+            <img src="https://otech.uaeh.edu.mx/noti/wp-content/uploads/2019/04/Notic.5-6.jpg"/>
+            <h2>Código ASCII:</h2>
+            <p>
+                El Código ASCII (American Standard Code for Information Interchange) es un estándar de codificación de caracteres que representa texto en computadoras y otros dispositivos que utilizan texto digital. Cada carácter (letra, número o símbolo) está representado por un número entero de 7 bits, lo que permite 128 combinaciones posibles.
+            </p>
+          <img src="https://www.dongee.com/tutoriales/content/images/2023/04/image-72.png"/>
+            
+            <h2>Digital vs. Analógico:</h2>
+            <p>
+                El contraste entre digital y analógico se refiere a cómo se representan y manejan los datos. Los datos analógicos son continuos y representan la información mediante variaciones en una señal física (como la onda de sonido en un micrófono). Los datos digitales son discretos y se representan en forma de valores binarios (ceros y unos), lo que facilita su procesamiento y almacenamiento en computadoras.
+            </p>
+            <img src="https://todoingenierias.com/wp-content/uploads/comparacion-de-controles-analogicos-y-digitales.png"/>
+        </div>
+
+        <button class="more-text-btn" onclick="toggleExtraText(2)">Hardware y Software</button>
+        <div class="extra-text" id="extraText2">
+            <h2>Hardware:</h2>
+            <p>
+                El hardware se refiere a todos los componentes físicos de un sistema informático, como la placa base, el procesador, la memoria, los discos duros, y los dispositivos periféricos como teclados, ratones, y pantallas. Es la parte tangible de un sistema que realiza las operaciones físicas necesarias para ejecutar el software.
+            </p>
+            <img src="https://assets.isu.pub/document-structure/220512153537-8c3a600a009a117c5f2e47aa49ffd446/v1/086b50b25eb8d55fec226c5dd6069e27.jpeg?width=1440&quality=85%2C50"/>
+            <h2>Detalles Placa Base:</h2>
+            <p>
+                La placa base (o motherboard) es el componente principal de una computadora que conecta y permite la comunicación entre todos los demás componentes (como el procesador, la memoria RAM, y los dispositivos de almacenamiento). Incluye circuitos, puertos, ranuras de expansión y conectores para periféricos, y es fundamental para el funcionamiento del sistema.
+            </p>
+            <img src="https://lh5.googleusercontent.com/41IMAwh3yd1CZVZY5moLHexxXHAyuZ6x3trLbQt4uhpe5rOP5yLl62zp5uPG0aXU0KIWBYOays3w5ATUoOFM-DGzw2iCwrNq7gmLrhP7P1PvTQXr9NqFv-g4wiM30g_1WOSZ1zPo"/>
+            <h2>Software:</h2>
+            <p>
+                El software es el conjunto de instrucciones y datos que permiten que el hardware realice tareas específicas. Se divide en dos categorías principales:
+                <ul>
+                    <li>Aplicaciones: Programas diseñados para realizar tareas específicas, como procesadores de texto, navegadores web, y juegos.</li>
+                    <li>Seguridad Informática: Subárea del software que incluye programas y prácticas destinados a proteger los sistemas informáticos y la información que contienen contra accesos no autorizados, ataques, y otros riesgos cibernéticos.</li>
+                </ul>
+            </p>
+           <img src="https://vidabytes.com/wp-content/uploads/2020/05/61c8850aa56ef7dc9d08305564628b66.jpg"/> 
+        </div>
+
+        <button class="more-text-btn" onclick="toggleExtraText(3)">Redes e Internet</button>
+        <div class="extra-text" id="extraText3">
+            <h2>Redes:</h2>
+            <p>
+                Las redes son sistemas de comunicación que permiten la transferencia de datos entre diferentes dispositivos. Pueden ser redes de área local (LAN) o redes de área amplia (WAN) y utilizan protocolos como TCP/IP para facilitar la comunicación entre computadoras y otros.
+            </p>
+            <img src="https://alphaenginyeria.com/wp-content/uploads/2022/08/Tipos-de-redes.webp"/>
+            <h2>Internet:</h2>
+            <p>
+                El Internet es una red global de redes interconectadas que permite la comunicación y el intercambio de información entre millones de dispositivos en todo el mundo. Utiliza protocolos estándar como TCP/IP para garantizar la interoperabilidad entre sistemas diversos y es la base para servicios como la web, el correo electrónico, y las redes sociales.
+            </p>
+            <img src="https://concepto.de/wp-content/uploads/2024/06/internet.jpg"/>
+            <h2>Redes de Conmutadoras:</h2>
+            <p>
+                Las redes de conmutación se refieren a la tecnología de redes que utiliza dispositivos llamados conmutadores (switches) para dirigir el tráfico de datos entre dispositivos de manera eficiente. La conmutación de paquetes es la técnica más común en redes modernas, donde los datos se dividen en pequeños paquetes que se envían a través de la red de manera independiente.
+            </p>
+            <img src="https://images.griddo.universitatcarlemany.com/c/cover/q/95/w/1080/h/610/p/center/f/avif/redes-informaticas-de-ordenadores-elementos-y-tipos"/>
+            <h2>Concepto de Internet:</h2>
+            <p>
+                El concepto de Internet se refiere a la idea de una red global descentralizada basada en el protocolo de Internet (IP), que permite la interconexión de redes locales y globales para compartir información y recursos. Internet no es una red única, sino una interconexión de miles de redes diferentes en todo el mundo, lo que permite la comunicación y la transferencia de datos a escala global.
+            </p>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOdDxcHxNGkEupZWhPPsEfQPDtiPXyxjUJes-XY6rom7DExj4erWGVGywjfKldAWMTZMGsrfQyANWQ3BwbutdYV3gTWAnvL86F22kGLwEi6mu9fNyXy1h7aoaY3VvKtVi-bQjmat6vahk/s320/internet.jpeg"/> 
+        </div>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">Volver Arriba</button>
+
+    <script>
+        function toggleText() {
+            const textElement = document.getElementById('revealText');
+            if (textElement.style.display === 'none' || textElement.style.display === '') {
+                textElement.style.display = 'block';
+            } else {
+                textElement.style.display = 'none';
+            }
+        }
+
+        function toggleExtraText(index) {
+            const textElement = document.getElementById(extraText${index});
+            if (textElement.style.display === 'none' || textElement.style.display === '') {
+                textElement.style.display = 'block';
+                textElement.style.maxHeight = textElement.scrollHeight + 'px'; // Expand to full height
+                textElement.style.padding = '20px'; // Ensure padding is visible
+            } else {
+                textElement.style.maxHeight = '0px'; // Collapse
+                textElement.style.padding = '0px'; // Hide padding
+                setTimeout(() => {
+                    textElement.style.display = 'none';
+                }, 300); // Match the transition duration
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Alternativa si el desplazamiento suave no funciona completamente
+            // Se asegura de que el scroll llegue al top usando setTimeout
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 500); // Asegúrate de que el tiempo sea suficiente para el scroll suave
+        }
+    </script>
+</body>
+</html>
