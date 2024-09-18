@@ -28,10 +28,7 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 
-    // Alternativa si el desplazamiento suave no funciona completamente
-    // Se asegura de que el scroll llegue al top usando setTimeout
     setTimeout(() => {
         window.scrollTo(0, 0);
-    }, 500); // Asegúrate de que el tiempo sea suficiente para el scroll suave
+    }, 500); // Ensure enough time for smooth scroll
 }
-
