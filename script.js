@@ -34,4 +34,3 @@ function scrollToTop() {
         window.scrollTo(0, 0);
     }, 500); // Asegúrate de que el tiempo sea suficiente para el scroll suave
 }
-
