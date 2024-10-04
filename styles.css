@@ -158,7 +158,7 @@ img {
     display: block;    /* Elimina el espacio debajo de la imagen */
     margin: 0 auto;   /* Centra la imagen si es más pequeña que el contenedor */
     max-height: 90vh; /* Limita la altura máxima al 90% de la altura de la ventana */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
 }
 
 iframe {
